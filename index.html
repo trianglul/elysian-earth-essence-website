@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elysian Earth Essence</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 🔄 Background Video -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="videos/buttervideosample.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <div class="header-container">
+      <img src="images/eeelogotr.png" alt="Logo" class="logo"/>
+      <h1 class="site-title">Elysian Earth Essence</h1>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="socials.html">Socials</a>
+    </nav>
+
+    <!-- ✅ Auth Buttons -->
+    <div id="auth-bar" class="auth-bar">
+      <button onclick="toggleAuthForm('signup')">Sign Up</button>
+      <button onclick="toggleAuthForm('login')">Log In</button>
+    </div>
+
+    <!-- ✅ Message Box -->
+    <div id="auth-message" class="auth-message"></div>
+
+    <!-- ✅ Logged In Panel -->
+    <div id="user-panel" class="user-panel" style="display: none;">
+      <span id="welcome-msg"></span>
+      <button onclick="signOut()">Log Out</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ✅ Hero Section -->
+    <section class="hero">
+      <h2>Nature's Touch for Radiant Skin</h2>
+      <p>Crafted with love and the earth’s finest ingredients.</p>
+      <a href="shop.html" class="shop-button">Shop Now</a>
+    </section>
+
+    <!-- ✅ Featured Products -->
+    <section class="featured-products">
+      <h3>Featured Products</h3>
+      <div class="products">
+        <div class="product-card">
+          <p>Vanilla Body Butter</p>
+          <img src="images/bodybuttersamplephoto.jpg" alt="Vanilla Body Butter" />
+        </div>
+        <div class="product-card">
+          <p>Lavender Body Butter</p>
+          <img src="images/bodybuttersamplephoto.jpg" alt="Lavender Body Butter" />
+        </div>
+        <div class="product-card">
+          <p>Orange Body Butter</p>
+          <img src="images/bodybuttersamplephoto.jpg" alt="Orange Body Butter" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ Reviews -->
+    <section class="reviews-section">
+      <h3>Customer Reviews</h3>
+
+      <!-- 🔒 Hidden until logged in -->
+      <form id="review-form" style="display: none;" onsubmit="submitReview(event)">
+        <textarea id="review-text" placeholder="Write your review..." required></textarea><br/>
+        <input type="number" id="rating" min="1" max="5" placeholder="Rating (1-5)" required /><br/>
+        <input type="file" id="image" /><br/>
+        <button type="submit">Submit Review</button>
+      </form>
+
+      <div id="reviews"></div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Elysian Earth Essence
+  </footer>
+
+  <!-- ✅ Supabase + Your JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
