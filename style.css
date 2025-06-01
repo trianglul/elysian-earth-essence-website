@@ -452,7 +452,6 @@ a img:hover {
   transform: scale(1.2);
 }
 
-
 /* --------- Animation for opening and closing -------------- */
 @keyframes fadeSlideIn {
   from {
