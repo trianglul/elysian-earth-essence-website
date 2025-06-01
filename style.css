@@ -442,6 +442,17 @@ footer {
   cursor: pointer;
 }
 
+/* ------- Social Media Logos ------ */
+a img {
+  margin: 0 10px;
+  transition: transform 0.2s ease;
+}
+
+a img:hover {
+  transform: scale(1.2);
+}
+
+
 /* --------- Animation for opening and closing -------------- */
 @keyframes fadeSlideIn {
   from {

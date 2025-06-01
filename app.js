@@ -204,3 +204,31 @@ async function loadReviews() {
 
 // ✅ Load reviews on page load
 loadReviews();
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function addToCart(name, price) {
+  const existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ name, price, quantity: 1 });
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`${name} added to cart`);
+}
+
+async function checkout() {
+  const response = await fetch('https://elysianearthessence.netlify.app/.netlify/functions/create-checkout-session', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ cart })
+  });
+
+  const data = await response.json();
+  if (data.url) {
+    window.location.href = data.url;
+  } else {
+    alert('Checkout failed. Try again.');
+  }
+}
