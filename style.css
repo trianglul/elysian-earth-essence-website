@@ -441,7 +441,13 @@ footer {
   font-size: 1.4rem;
   cursor: pointer;
 }
+/* ------- Social Media Logos ------ */
+a img {
+  margin: 0 10px;
+  transition: transform 0.2s ease;
+}
 
+<<<<<<< HEAD
 /* ------- Social Media Logos ------ */
 a img {
   margin: 0 10px;
@@ -453,6 +459,11 @@ a img:hover {
 }
 
 
+=======
+a img:hover {
+  transform: scale(1.2);
+}
+>>>>>>> 8514e4d0474508499b49268b99381815b1f5be54
 /* --------- Animation for opening and closing -------------- */
 @keyframes fadeSlideIn {
   from {
