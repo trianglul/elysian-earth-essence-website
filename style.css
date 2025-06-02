@@ -42,6 +42,7 @@ header {
 .logo {
   width: 160px;
   height: auto;
+  background-color: #ffffff
 } 
 
 .site-title {
