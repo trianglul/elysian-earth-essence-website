@@ -37,14 +37,19 @@
         <button onclick="addToCart('Lavender Body Butter', 2500)">Add to Cart</button>
       </div>
 
-      <div class="product-card">
-        <!-- Replace image path here -->
-        <img src="images/bodybuttersamplephoto.jpg" alt="Orange Body Butter" />
-        <h3>Orange Body Butter 8oz</h3>
-        <p>Citrus, tropical, and for silky smooth skin.</p>
-        <p><strong>$25</strong></p>
-        <button onclick="addToCart('Orange Body Butter', 2500)">Add to Cart</button>
-      </div>
+  <div class="product-card">
+    <img src="images/bodybuttersamplephoto.jpg" alt="Orange Body Butter" />
+    <h3>Orange Body Butter 8oz</h3>
+    <p>Citrus, tropical, and for silky smooth skin.</p>
+    <p><strong>$25</strong></p>
+    <label>Qty:
+      <input type="number" id="qty-orange" min="1" value="1" />
+    </label>
+    <button onclick="addToCart('Orange Body Butter', 2500, document.getElementById('qty-orange').value)">
+      Add to Cart
+    </button>
+  </div>
+
       
       <div class="product-card">
         <!-- Replace image path here -->
