@@ -1,7 +1,20 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+function addToCart(name, price) {
+  const existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ name, price, quantity: 1 });
+  }
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`${name} added to cart`);
+}
+
 function renderCart() {
   const container = document.getElementById('cart-container');
+  if (!container) return; // prevent error if this element doesn't exist
+
   if (cart.length === 0) {
     container.innerHTML = '<p>Your cart is empty.</p>';
     return;
@@ -43,5 +56,5 @@ async function checkout() {
   }
 }
 
-// Load the cart on page load
-renderCart();
+// Load the cart on page load (only if cart-container exists)
+window.addEventListener('DOMContentLoaded', renderCart);
