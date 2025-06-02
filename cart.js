@@ -1,15 +1,20 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-function addToCart(name, price) {
+function addToCart(name, price, quantity = 1) {
+  quantity = parseInt(quantity);
+  if (isNaN(quantity) || quantity < 1) quantity = 1;
+
   const existing = cart.find(item => item.name === name);
   if (existing) {
-    existing.quantity += 1;
+    existing.quantity += quantity;
   } else {
-    cart.push({ name, price, quantity: 1 });
+    cart.push({ name, price, quantity });
   }
+
   localStorage.setItem('cart', JSON.stringify(cart));
-  alert(`${name} added to cart`);
+  alert(`${quantity} × ${name} added to cart`);
 }
+
 
 function renderCart() {
   const container = document.getElementById('cart-container');
