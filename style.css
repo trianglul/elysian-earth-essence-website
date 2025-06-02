@@ -23,7 +23,7 @@ h1, h2, h3 {
 
 /* ----------- Header ----------- */
 header {
-  background: linear-gradient(to bottom, #ffffff 0%, rgba(219, 172, 252, 0.4) 35%, rgba(205, 142, 250, 0.4) 65%, rgba(187, 101, 247, 0) 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(219, 172, 252, 0.2) 60%, rgba(187, 101, 247, 0) 100%);
   color: #fff;
   padding: 20px 0;
   text-align: center; /* centers nav and title */
