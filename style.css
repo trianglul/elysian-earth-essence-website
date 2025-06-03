@@ -232,6 +232,68 @@ h1, h2, h3 {
     outline-offset: 4px;
 }
 
+/* Main Section Styling */
+main {
+    padding: 20px;
+    background-color: #f7f7f7; /* Light background color for the main section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 600px; /* Limit max width */
+    margin: 30px auto; /* Center the container */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Cart Container Styling */
+#cart-container {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;  /* Rounded corners */
+    border: 1px solid #ddd; /* Light border for separation */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Button Styling */
+.cta-button {
+    background-color: #7a9e55;  /* Soft Green */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;  /* Rounded corners */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    margin-top: 20px; /* Space between cart and button */
+    width: 100%; /* Make the button span the width of the container */
+}
+
+/* Icon Styling */
+.cta-button i {
+    margin-right: 10px;  /* Space between icon and text */
+    font-size: 1.5em;  /* Adjust icon size */
+}
+
+/* Hover Effect for Button */
+.cta-button:hover {
+    background-color: #4b6b34;  /* Darker green on hover */
+    transform: scale(1.05);  /* Slight grow effect */
+}
+
+/* Focus Effect for Accessibility */
+.cta-button:focus {
+    outline: 2px solid #7a9e55; /* Outline on focus */
+    outline-offset: 4px;
+}
+
+/* Button Active State (Optional) */
+.cta-button:active {
+    transform: scale(0.98); /* Slight shrink effect on click */
+}
+/* --------------------------------------------------------------------------------------- */
 .auth-bar, .user-panel {
   position: absolute;
   top: 20px;
