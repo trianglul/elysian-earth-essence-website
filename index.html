@@ -6,6 +6,7 @@
   <title>Elysian Earth Essence</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -29,11 +30,19 @@
       <a href="cart.html">Cart</a>
     </nav>
 
-    <!-- ✅ Auth Buttons -->
+    <!-- ✅ Auth Buttons 
     <div id="auth-bar" class="auth-bar">
       <button onclick="toggleAuthForm('signup')">Sign Up</button>
       <button onclick="toggleAuthForm('login')">Log In</button>
-    </div>
+    </div> -->
+<div id="auth-bar" class="auth-bar">
+    <button class="cta-button" onclick="toggleAuthForm('signup')">
+        <i class="fas fa-leaf"></i> Sign Up
+    </button>
+    <button class="cta-button" onclick="toggleAuthForm('login')">
+        <i class="fas fa-leaf"></i> Log In
+    </button>
+</div>
 
     <!-- ✅ Message Box -->
     <div id="auth-message" class="auth-message"></div>
