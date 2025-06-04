@@ -9,14 +9,9 @@
 <body>
   <header>
     <h1>Thank You</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="shop.html">Shop</a>
-      <a href="contact.html">Contact</a>
-      <a href="cart.html">Cart</a>
-    </nav>
   </header>
+  
+<div id="nav-placeholder"></div>
 
   <main>
     <p>Thank You For Your Purchase!</p>
@@ -26,6 +21,25 @@
   <footer>
     &copy; 2025 Elysian Earth Essence
   </footer>
+  
+   <script>
+  // Load the shared nav
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+      updateCartCount(); // Call this after nav loads
+    });
+
+  // Set up cart count from localStorage
+  function updateCartCount() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    const cartCount = document.getElementById('cart-count');
+    if (cartCount) {
+      cartCount.textContent = cartItems.length;
+    }
+  }
+</script>
   
  <script>
     // Clear cart after successful checkout
