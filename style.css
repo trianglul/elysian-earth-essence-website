@@ -132,6 +132,14 @@ nav a:hover {
   transform: translateY(0);
 }
 
+#cart-count {
+  transition: transform 0.3s ease;
+}
+
+#cart-count.updated {
+  transform: scale(1.2);
+}
+
 
 @keyframes pop {
   0%   { transform: scale(1); }
@@ -142,6 +150,7 @@ nav a:hover {
 .cart-count-pop {
   animation: pop 0.3s ease;
 }
+
 
 /* ---------- Main Sections ----------------- */
 main {
@@ -212,15 +221,6 @@ h1, h2, h3 {
 .buy-button:hover {
   background-color: #5f8057;
 }
-
-#cart-count {
-  transition: transform 0.3s ease;
-}
-
-#cart-count.updated {
-  transform: scale(1.2);
-}
-
 
 /* ---------- Reviews Section ------------- */
 .reviews-section {
