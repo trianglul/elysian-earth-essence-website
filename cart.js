@@ -6,6 +6,11 @@ function updateCartCount() {
   if (countSpan) {
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     countSpan.textContent = totalItems;
+
+    // Trigger animation
+    countSpan.classList.remove('cart-count-pop');
+    void countSpan.offsetWidth; // Force reflow
+    countSpan.classList.add('cart-count-pop');
   }
 }
 
