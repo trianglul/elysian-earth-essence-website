@@ -11,5 +11,26 @@
     <p>Your payment was cancelled or didn’t go through.</p>
 <div id="nav-placeholder"></div>
   </main>
+  
+<script>
+  // Load shared nav and then update cart count
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+      updateCartCount(); // Update count after nav is loaded
+    });
+
+  // Update cart count based on your localStorage 'cart' key
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const countSpan = document.getElementById('cart-count');
+    if (countSpan) {
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      countSpan.textContent = totalItems;
+    }
+  }
+</script>
+  
 </body>
 </html>
