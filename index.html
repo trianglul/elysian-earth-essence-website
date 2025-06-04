@@ -29,7 +29,24 @@
       <a href="contact.html">Contact</a>
       <a href="cart.html">Cart</a>
     </nav>
+  <!-- ✅ Auth Buttons -->
+<div id="auth-bar" class="auth-bar">
+    <button class="cta-button" onclick="toggleAuthForm('signup')">
+        <i class="fas fa-leaf"></i> Sign Up
+    </button>
+    <button class="cta-button" onclick="toggleAuthForm('login')">
+        <i class="fas fa-leaf"></i> Log In
+    </button>
+</div>
 
+    <!-- ✅ Message Box -->
+    <div id="auth-message" class="auth-message"></div>
+
+    <!-- ✅ Logged In Panel -->
+    <div id="user-panel" class="user-panel" style="display: none;">
+      <span id="welcome-msg"></span>
+      <button onclick="signOut()">Log Out</button>
+    </div>
   </header>
 
   <main>
@@ -62,24 +79,6 @@
     <!-- ✅ Reviews -->
     <section class="reviews-section">
       <h3>Customer Reviews</h3>
-         <!-- ✅ Auth Buttons -->
-<div id="auth-bar" class="auth-bar">
-    <button class="cta-button" onclick="toggleAuthForm('signup')">
-        <i class="fas fa-leaf"></i> Sign Up
-    </button>
-    <button class="cta-button" onclick="toggleAuthForm('login')">
-        <i class="fas fa-leaf"></i> Log In
-    </button>
-</div>
-
-    <!-- ✅ Message Box -->
-    <div id="auth-message" class="auth-message"></div>
-
-    <!-- ✅ Logged In Panel -->
-    <div id="user-panel" class="user-panel" style="display: none;">
-      <span id="welcome-msg"></span>
-      <button onclick="signOut()">Log Out</button>
-    </div>
 
       <!-- 🔒 Hidden until logged in -->
       <form id="review-form" style="display: none;" onsubmit="submitReview(event)">
