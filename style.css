@@ -213,6 +213,15 @@ h1, h2, h3 {
   background-color: #5f8057;
 }
 
+#cart-count {
+  transition: transform 0.3s ease;
+}
+
+#cart-count.updated {
+  transform: scale(1.2);
+}
+
+
 /* ---------- Reviews Section ------------- */
 .reviews-section {
   background-color: #e9ebdd; /* same soft lavender as hero */
