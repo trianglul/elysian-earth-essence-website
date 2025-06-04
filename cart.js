@@ -60,8 +60,8 @@ function addToCart(name, price, quantity = 1) {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
-  showCartMessage(`${quantity} × ${name} added to cart`);
   updateCartCount();
+  showCartMessage(`${quantity} × ${name} added to cart`);
 }
 
 
