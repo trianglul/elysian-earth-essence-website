@@ -1,18 +1,40 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+// function updateCartCount() {
+//  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+//  const countSpan = document.getElementById('cart-count');
+//  if (countSpan) {
+ //   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+ //   countSpan.textContent = totalItems;
+
+    // Trigger animation
+ //   countSpan.classList.remove('cart-count-pop');
+ //   void countSpan.offsetWidth; // Force reflow
+ //   countSpan.classList.add('cart-count-pop');
+ // }
+//}
+
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem('cart') || '[]');
   const countSpan = document.getElementById('cart-count');
   if (countSpan) {
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    countSpan.textContent = totalItems;
 
-    // Trigger animation
-    countSpan.classList.remove('cart-count-pop');
-    void countSpan.offsetWidth; // Force reflow
-    countSpan.classList.add('cart-count-pop');
+    // Only animate if the number changed
+    if (countSpan.textContent != totalItems) {
+      countSpan.textContent = totalItems;
+
+      // Add animation class to trigger pop
+      countSpan.classList.add('cart-count-pop');
+
+      // Remove animation class after animation ends so it can trigger again next time
+      countSpan.addEventListener('animationend', () => {
+        countSpan.classList.remove('cart-count-pop');
+      }, { once: true });
+    }
   }
 }
+
 
 function showCartMessage(message) {
   const msgBox = document.getElementById('cart-message');
