@@ -62,24 +62,26 @@
     &copy; 2025 Elysian Earth Essence
   </footer>
 
-  <script>
-  // Load the shared nav
+ <script>
+  // Load shared nav and then update cart count
   fetch('nav.html')
     .then(response => response.text())
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
-      updateCartCount(); // Call this after nav loads
+    .then(html => {
+      document.getElementById('nav-placeholder').innerHTML = html;
+      updateCartCount(); // Update count after nav is loaded
     });
 
-  // Set up cart count from localStorage
+  // Update cart count based on your localStorage 'cart' key
   function updateCartCount() {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
-    const cartCount = document.getElementById('cart-count');
-    if (cartCount) {
-      cartCount.textContent = cartItems.length;
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const countSpan = document.getElementById('cart-count');
+    if (countSpan) {
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      countSpan.textContent = totalItems;
     }
   }
 </script>
+
 
   <script src="cart.js"></script>
 
