@@ -22,13 +22,8 @@
       <h1 class="site-title">Elysian Earth Essence</h1>
     </div>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="shop.html">Shop</a>
-      <a href="contact.html">Contact</a>
-      <a href="cart.html">Cart</a>
-    </nav>
+    <div id="nav-placeholder"></div>
+
   <!-- ✅ Auth Buttons -->
 <div id="auth-bar" class="auth-bar">
     <button class="cta-button" onclick="toggleAuthForm('signup')">
@@ -108,6 +103,25 @@
   <footer>
     &copy; 2025 Elysian Earth Essence
   </footer>
+
+  <script>
+  // Load the shared nav
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
+      updateCartCount(); // Call this after nav loads
+    });
+
+  // Set up cart count from localStorage
+  function updateCartCount() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    const cartCount = document.getElementById('cart-count');
+    if (cartCount) {
+      cartCount.textContent = cartItems.length;
+    }
+  }
+</script>
 
   <!-- ✅ Supabase + Your JS -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
