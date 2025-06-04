@@ -1,5 +1,14 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  const countSpan = document.getElementById('cart-count');
+  if (countSpan) {
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    countSpan.textContent = totalItems;
+  }
+}
+
 function addToCart(name, price, quantity = 1) {
   quantity = parseInt(quantity);
   if (isNaN(quantity) || quantity < 1) quantity = 1;
@@ -45,6 +54,7 @@ function removeFromCart(name) {
   cart = cart.filter(item => item.name !== name);
   localStorage.setItem('cart', JSON.stringify(cart));
   renderCart();
+  updateCartCount();
 }
 
 async function checkout() {
@@ -62,5 +72,6 @@ async function checkout() {
   }
 }
 
+updateCartCount();
 // Load the cart on page load (only if cart-container exists)
 window.addEventListener('DOMContentLoaded', renderCart);
