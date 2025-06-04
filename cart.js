@@ -14,6 +14,18 @@ function updateCartCount() {
   }
 }
 
+function showCartMessage(message) {
+  const msgBox = document.getElementById('cart-message');
+  if (!msgBox) return;
+
+  msgBox.textContent = message;
+  msgBox.classList.add('show');
+
+  setTimeout(() => {
+    msgBox.classList.remove('show');
+  }, 2000);
+}
+
 function addToCart(name, price, quantity = 1) {
   quantity = parseInt(quantity);
   if (isNaN(quantity) || quantity < 1) quantity = 1;
@@ -26,7 +38,7 @@ function addToCart(name, price, quantity = 1) {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
-  alert(`${quantity} × ${name} added to cart`);
+  showCartMessage(`${quantity} × ${name} added to cart`);
   updateCartCount();
 }
 
