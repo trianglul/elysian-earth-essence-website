@@ -13,6 +13,7 @@ function addToCart(name, price, quantity = 1) {
 
   localStorage.setItem('cart', JSON.stringify(cart));
   alert(`${quantity} × ${name} added to cart`);
+  updateCartCount();
 }
 
 
