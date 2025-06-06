@@ -239,6 +239,33 @@ h1, h2, h3 {
   margin-bottom: 20px;
 }
 
+.reviews-section .auth-bar,
+.reviews-section .user-panel {
+  position: static; /* Reset from absolute */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.reviews-section .user-panel button {
+  background-color: #7a9e55;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reviews-section .user-panel button:hover {
+  background-color: #4b6b34;
+}
+
+
 /* Auth Bar Buttons */
 .auth-bar button {
     background-color: #7a9e55;  /* Soft Green */
@@ -275,14 +302,14 @@ h1, h2, h3 {
 }
 
 /* --------------------------------------------------------------------------------------- */
-.auth-bar, .user-panel {
+/*.auth-bar, .user-panel {
   position: absolute;
   top: 20px;
   right: 30px;
   display: flex;
   gap: 10px;
   align-items: center;
-}
+}*/
 
 .auth-form {
   position: absolute;
