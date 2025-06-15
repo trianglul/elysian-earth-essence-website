@@ -23,8 +23,13 @@
       <h3>8oz Vanilla Body Butter</h3>
       <p>Relaxing, nourishing, and deeply hydrating.</p>
       <p><strong>$26.75</strong></p>
-      <button onclick="addToCart('8oz Vanilla Body Butter', 2675)">Add to Cart</button>
-    </div>
+      <label>Qty:
+      <input type="number" id="qty-vanilla8" min="1" value="1" />
+    </label>
+    <button onclick="addToCart('8oz Vanilla Body Butter', 2675, document.getElementById('qty-vanilla8').value)">
+      Add to Cart
+    </button>
+  </div>
 
   <div class="product-card">
     <img src="images/vanilla4.jpg" alt="4oz Vanilla Body Butter" />
@@ -38,38 +43,85 @@
       Add to Cart
     </button>
   </div>
-      
-      <div class="product-card">
-        <!-- Replace image path here -->
-        <img src="images/bodybuttersamplephoto.jpg" alt="Lavender Body Butter" />
-        <h3>Lavender Body Butter 8oz</h3>
-        <p>Bring out your natural radiance with botanical oils.</p>
-        <p><strong>$25</strong></p>
-        <button onclick="addToCart('Lavender Body Butter', 2500)">Add to Cart</button>
-      </div>
 
-  <div class="product-card">
-    <img src="images/bodybuttersamplephoto.jpg" alt="Orange Body Butter" />
-    <h3>Orange Body Butter 8oz</h3>
-    <p>Citrus, tropical, and for silky smooth skin.</p>
-    <p><strong>$25</strong></p>
-    <label>Qty:
-      <input type="number" id="qty-orange" min="1" value="1" />
+<div class="product-card">
+      <img src="images/rose8.jpg" alt="8oz Rose Body Butter" />
+      <h3>8oz Rose Body Butter</h3>
+      <p>Relaxing, nourishing, and deeply hydrating.</p>
+      <p><strong>$26.75</strong></p>
+      <label>Qty:
+      <input type="number" id="qty-rose8" min="1" value="1" />
     </label>
-    <button onclick="addToCart('Orange Body Butter', 2500, document.getElementById('qty-orange').value)">
+    <button onclick="addToCart('8oz Rose Body Butter', 2675, document.getElementById('qty-rose8').value)">
       Add to Cart
     </button>
   </div>
 
-      
-      <div class="product-card">
-        <!-- Replace image path here -->
-        <img src="images/bodybuttersamplephoto.jpg" alt="Ylang Ylang Body Butter" />
-        <h3>Ylang Ylang Body Butter 8oz</h3>
-        <p>Strong, pleasant, and flourishing.</p>
-        <p><strong>$25</strong></p>
-        <button onclick="addToCart('Ylang Ylang Body Butter', 2500)">Add to Cart</button>
-      </div>
+  <div class="product-card">
+    <img src="images/rose4.jpg" alt="4oz Rose Body Butter" />
+    <h3>4oz Rose Body Butter</h3>
+    <p>Relaxing, nourishing, and deeply hydrating.</p>
+    <p><strong>$15.75</strong></p>
+    <label>Qty:
+      <input type="number" id="qty-rose4" min="1" value="1" />
+    </label>
+    <button onclick="addToCart('4oz Rose Body Butter', 1575, document.getElementById('qty-rose4').value)">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="product-card">
+      <img src="images/lavender8.jpg" alt="8oz Lavender Body Butter" />
+      <h3>8oz Lavender Body Butter</h3>
+      <p>Bring out your natural radiance with botanical oils.</p>
+      <p><strong>$26.75</strong></p>
+      <label>Qty:
+      <input type="number" id="qty-lavender8" min="1" value="1" />
+    </label>
+    <button onclick="addToCart('8oz Lavender Body Butter', 2675, document.getElementById('qty-lavender8').value)">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/lavender4.jpg" alt="4oz Lavender Body Butter" />
+    <h3>4oz Lavender Body Butter</h3>
+    <p>Bring out your natural radiance with botanical oils.</p>
+    <p><strong>$15.75</strong></p>
+    <label>Qty:
+      <input type="number" id="qty-lavender4" min="1" value="1" />
+    </label>
+    <button onclick="addToCart('4oz Lavender Body Butter', 1575, document.getElementById('qty-lavender4').value)">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="product-card">
+      <img src="images/ylangylang8.jpg" alt="8oz Ylang Ylang Body Butter" />
+      <h3>8oz Ylang Ylang Body Butter</h3>
+      <p>Strong, pleasant, and flourishing.</p>
+      <p><strong>$26.75</strong></p>
+      <label>Qty:
+      <input type="number" id="qty-ylangylang8" min="1" value="1" />
+    </label>
+    <button onclick="addToCart('8oz Ylang Ylang Body Butter', 2675, document.getElementById('qty-ylangylang8').value)">
+      Add to Cart
+    </button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/ylangylang4.jpg" alt="4oz Ylang Ylang Body Butter" />
+    <h3>4oz Ylang Ylang Body Butter</h3>
+    <p>Strong, pleasant, and flourishing.</p>
+    <p><strong>$15.75</strong></p>
+    <label>Qty:
+      <input type="number" id="qty-ylangylang4" min="1" value="1" />
+    </label>
+    <button onclick="addToCart('4oz Ylang Ylang Body Butter', 1575, document.getElementById('qty-ylangylang4').value)">
+      Add to Cart
+    </button>
+  </div>
+
     </section>
   </main>
 
