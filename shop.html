@@ -19,13 +19,26 @@
   <main>
     <section class="products">
      <div class="product-card">
-      <img src="images/bodybuttersamplephoto.jpg" alt="Vanilla Body Butter" />
-      <h3>Vanilla Body Butter 8oz</h3>
+      <img src="images/vanilla8.jpg" alt="8oz Vanilla Body Butter" />
+      <h3>8oz Vanilla Body Butter</h3>
       <p>Relaxing, nourishing, and deeply hydrating.</p>
-      <p><strong>$25</strong></p>
-      <button onclick="addToCart('Vanilla Body Butter', 2500)">Add to Cart</button>
+      <p><strong>$26.75</strong></p>
+      <button onclick="addToCart('8oz Vanilla Body Butter', 2675)">Add to Cart</button>
     </div>
 
+  <div class="product-card">
+    <img src="images/vanilla4.jpg" alt="4oz Vanilla Body Butter" />
+    <h3>4oz Vanilla Body Butter</h3>
+    <p>Relaxing, nourishing, and deeply hydrating.</p>
+    <p><strong>$15.75</strong></p>
+    <label>Qty:
+      <input type="number" id="qty-vanilla4" min="1" value="1" />
+    </label>
+    <button onclick="addToCart('4oz Vanilla Body Butter', 1575, document.getElementById('qty-vanilla4').value)">
+      Add to Cart
+    </button>
+  </div>
+      
       <div class="product-card">
         <!-- Replace image path here -->
         <img src="images/bodybuttersamplephoto.jpg" alt="Lavender Body Butter" />
