@@ -52,15 +52,6 @@ header {
   font-weight: 500;
   margin: 0;
   color: #004406b1;
-  text-shadow:
-  -1px -1px 0 rgb(0, 138, 14),
-  1px -1px 0 rgb(0, 138, 14),
-  -1px 1px 0 rgb(0, 138, 14),
-  1px 1px 0 rgb(0, 138, 14),
-  0px -1px 0 rgb(0, 138, 14),
-  -1px 0px 0 rgb(0, 138, 14),
-  1px 0px 0 rgb(0, 138, 14),
-  0px 1px 0 rgb(0, 138, 14);
 }
 
 /* -------- Responsive adjustments for mobile ----------  */
