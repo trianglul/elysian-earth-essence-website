@@ -69,7 +69,7 @@ header {
     margin-bottom: 5px;
   }
   .site-title {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 }
 
@@ -83,7 +83,7 @@ nav a {
   font-weight: 800;
   display: inline-block; /* text becomes inline block so it can be styled */
   padding: 4px 15px; /* Adds space around the text */
-  background-color: #c05cc0; 
+  background-color: #bd75b3; 
   text-decoration: none; /* Removes underline */
   border-radius: 25px; /* Makes it oval-shaped */
   transition: background-color 0.3s ease; /* Smooth hover effect */
@@ -98,7 +98,7 @@ nav a:hover {
     text-shadow: 0 0 8px #b700ff;
   }
   50% {
-    text-shadow: 0 0 16px #b700ff, 0 0 20px #ffffff;
+    text-shadow: 0 0 16px #b700ff, 0 0 30px #ffffff;
   }
   100% {
     text-shadow: 0 0 8px #b700ff;
