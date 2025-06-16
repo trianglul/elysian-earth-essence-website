@@ -151,8 +151,15 @@ main {
   padding: 20px;
 }
 
-h1, h2, h3 {
+h1, h2 {
   color: #774e9c; /* Headlines + Middle Headline Shop Now+ Featured Products*/
+}
+
+h3 {
+  color: #774e9c;
+  background-color: #ebddeb;
+  background-radius: 100px;
+  padding: 5px 10px;
 }
 
 .hero {
