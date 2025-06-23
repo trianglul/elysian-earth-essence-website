@@ -152,7 +152,7 @@ main {
 }
 
 h1, h2, h3 {
-  color: #774e9c; /* Headlines + Middle Headline Shop Now+ Featured Products*/
+  color: #774e9c; /* Headlines + Middle Headline Shop Now+ Natural Ingredients*/
 }
 
 .hero {
@@ -162,7 +162,7 @@ h1, h2, h3 {
   border-radius: 8px;
 }
 
-.featured-products, .products, .gallery {
+.natural-indredients, .products, .gallery {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
