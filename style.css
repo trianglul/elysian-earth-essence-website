@@ -162,7 +162,11 @@ h1, h2, h3 {
   border-radius: 8px;
 }
 
-.natural-indredients, .products, .gallery {
+.natural-indredients {
+  text-align: center:
+}
+
+.products, .gallery {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
