@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Elysian Earth Essence</title>
-  <meta name="netlify" content="form">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -19,10 +18,8 @@
     <section class="contact-form">
       <h2>We'd love to hear from you!</h2>
 
-      <!-- ✅ Netlify Form -->
-      <form name="contact" method="POST" data-netlify="true" netlify>
-        <input type="hidden" name="form-name" value="contact">
-
+      <!-- Formspree Form -->
+      <form action="https://formspree.io/f/mblyborr" method="POST">
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required />
 
