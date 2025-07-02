@@ -18,8 +18,14 @@
     <section class="contact-form">
       <h2>We'd love to hear from you!</h2>
 
-      <!-- Formspree Form -->
-      <form action="https://formspree.io/f/mblyborr" method="POST">
+      <!-- Formspree Form with Redirect -->
+      <form action="https://formspree.io/f/youruniqueid" method="POST">
+        <!-- Hidden field for the form name -->
+        <input type="hidden" name="form-name" value="contact">
+
+        <!-- Hidden redirect field -->
+        <input type="hidden" name="redirect" value="/thank-you.html">
+
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required />
 
