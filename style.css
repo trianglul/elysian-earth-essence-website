@@ -158,7 +158,14 @@ main {
   padding: 20px;
 }
 
-h1, h2, h3 {
+h1 {
+  color: #774e9c;
+  border-radius: 100px;
+  padding: 8px 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+h2, h3 {
   color: #774e9c; /* Headlines + Middle Headline Shop Now+ Natural Ingredients*/
 }
 
@@ -213,19 +220,6 @@ h1, h2, h3 {
   background-color: #7a5f81; /* deeper lavender on hover */
   transform: scale(1.05);
 }
-/*.buy-button {
-  display: inline-block;
-  padding: 10px 15px;
-  background-color: #3f5c3d;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-.buy-button:hover {
-  background-color: #5f8057;
-}*/
 
 /* ---------- Reviews Section ------------- */
 .reviews-section {
