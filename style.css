@@ -20,6 +20,13 @@ h1, h2, h3 {
   z-index: -1; /* Puts video behind content */
 }
 
+.shop-page {
+  background-image: url('images/shop-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
 
 /* ----------- Header ----------- */
 header {
