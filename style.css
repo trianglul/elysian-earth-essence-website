@@ -43,8 +43,8 @@ h1, h2, h3 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Match base image size */
-  height: auto;
+  width: 70%; /* Match base image size */
+  height: 70%;
   opacity: 0;
   transition: opacity 0.4s ease, transform 0.4s ease;
   transform: scale(1.05);
