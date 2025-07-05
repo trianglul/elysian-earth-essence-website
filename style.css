@@ -28,6 +28,34 @@ h1, h2, h3 {
   background-attachment: fixed;
 }
 
+.image-hover-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.base-image {
+  display: block;
+  width: 100%; /* or a fixed width like 250px */
+  height: auto;
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Match base image size */
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+.image-hover-wrapper:hover .hover-image {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /* ----------- Header ----------- */
 header {
   background: linear-gradient(to bottom, #ffffff 0%, rgba(219, 172, 252, 0.2) 60%, rgba(187, 101, 247, 0) 100%);
