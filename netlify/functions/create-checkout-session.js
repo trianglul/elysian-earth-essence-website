@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
   }
 
   // Your existing logic
-  const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+  //const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
   const { cart } = JSON.parse(event.body);
 
    //build your line items...
@@ -31,6 +31,11 @@ exports.handler = async (event, context) => {
     })),
     success_url: 'https://www.elysianearthessence.com/success.html',
     cancel_url: 'https://www.elysianearthessence.com/cancel.html',
+
+    // Add shipping address collection
+    shipping_address_collection: {
+      allowed_countries: ['*'], //all countries
+    }
   });
 
   return {
