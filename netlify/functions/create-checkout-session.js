@@ -33,10 +33,10 @@ exports.handler = async (event, context) => {
     cancel_url: 'https://www.elysianearthessence.com/cancel.html',
 
     // Add shipping address collection
-    shipping_address_collection: {
-      allowed_countries: ['*'], //all countries
-    },
-    billing_address_collection: 'auto',
+ //   shipping_address_collection: {
+ //     allowed_countries: ['*'], //all countries
+ //   },
+ //   billing_address_collection: 'auto',
   });
 
   return {
