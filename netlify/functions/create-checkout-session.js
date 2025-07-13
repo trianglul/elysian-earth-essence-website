@@ -35,7 +35,8 @@ exports.handler = async (event, context) => {
     // Add shipping address collection
     shipping_address_collection: {
       allowed_countries: ['*'], //all countries
-    }
+    },
+    billing_address_collection: 'auto',
   });
 
   return {
