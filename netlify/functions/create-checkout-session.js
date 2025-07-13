@@ -1,76 +1,43 @@
-// const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-//exports.handler = async (event, context) => {
-  //if (event.httpMethod === 'OPTIONS') {
-    //return {
-      //statusCode: 200,
-      //headers: {
-        //'Access-Control-Allow-Origin': 'https://www.elysianearthessence.com',
-        //'Access-Control-Allow-Headers': 'Content-Type',
-        //'Access-Control-Allow-Methods': 'POST, OPTIONS'
-      //},
-      //body: 'Preflight'
-    //};
-  //}
+exports.handler = async (event, context) => {
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': 'https://www.elysianearthessence.com',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS'
+      },
+      body: 'Preflight'
+    };
+  }
 
   // Your existing logic
-  //const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-  //const { cart } = JSON.parse(event.body);
+  const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+  const { cart } = JSON.parse(event.body);
 
-  // build your line items...
-  //const session = await stripe.checkout.sessions.create({
-    //payment_method_types: ['card'],
-    //mode: 'payment',
-    //line_items: cart.map(item => ({
-      //price_data: {
-        //currency: 'usd',
-        //product_data: { name: item.name },
-        //unit_amount: item.price,
-      //},
-      //quantity: item.quantity
-    //})),
-    //success_url: 'https://www.elysianearthessence.com/success.html',
-    //cancel_url: 'https://www.elysianearthessence.com/cancel.html',
-  //});
+   //build your line items...
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    mode: 'payment',
+    line_items: cart.map(item => ({
+      price_data: {
+        currency: 'usd',
+        product_data: { name: item.name },
+        unit_amount: item.price,
+      },
+      quantity: item.quantity
+    })),
+    success_url: 'https://www.elysianearthessence.com/success.html',
+    cancel_url: 'https://www.elysianearthessence.com/cancel.html',
+  });
 
-  //return {
-    //statusCode: 200,
-    //headers: {
-      //'Access-Control-Allow-Origin': 'https://www.elysianearthessence.com',
-    //},
-    //body: JSON.stringify({ url: session.url }),
-  //};
-//};
-
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const { cart } = JSON.parse(event.body);
-
-// build your line items...
-const session = await stripe.checkout.sessions.create({
-  payment_method_types: ['card'],
-  mode: 'payment',
-  line_items: cart.map(item => ({
-    price_data: {
-      currency: 'usd',
-      product_data: { name: item.name },
-      unit_amount: item.price,
+  return {
+    statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': 'https://www.elysianearthessence.com',
     },
-    quantity: item.quantity
-  })),
-  success_url: 'https://www.elysianearthessence.com/success.html',
-  cancel_url: 'https://www.elysianearthessence.com/cancel.html',
-  
-  // Enable address collection for shipping (optional: can be set to 'shipping' or 'billing' or both)
-  shipping_address_collection: {
-    allowed_countries: ['US', 'CA'], // Adjust to allowed countries (e.g. 'US', 'CA' for the US and Canada)
-  },
-});
-
-return {
-  statusCode: 200,
-  headers: {
-    'Access-Control-Allow-Origin': 'https://www.elysianearthessence.com',
-  },
-  body: JSON.stringify({ url: session.url }),
+    body: JSON.stringify({ url: session.url }),
+  };
 };
-
