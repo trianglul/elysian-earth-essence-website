@@ -520,6 +520,9 @@ footer {
   margin-top: 40px;
 }
 
+.social-links a{
+  text-decoration: none;
+}
 /* ----------- Auth Overlay Fullscreen Modal ----------- */
 .auth-overlay {
   position: fixed;
